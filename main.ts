@@ -38,6 +38,25 @@ function make_map () {
     scene.setTile(5, assets.tile`tile_1`, false)
     scene.setTile(9, assets.tile`tile_2`, false)
     scene.setTile(1, assets.tile`fire_hole`, false)
+    scene.setTile(10, img`
+        . . . . . . . c c . . . . . . . 
+        . . . . c c c 6 5 c 6 6 . . . . 
+        . . . . c 6 c 5 5 c 7 6 . . . . 
+        . . . 6 c c 7 5 5 7 c 6 6 . . . 
+        . . c c 7 7 7 7 7 5 7 7 c 6 . . 
+        . 6 6 6 c 6 7 7 7 7 6 c c 6 6 . 
+        c 7 7 7 6 c 7 c 6 7 6 7 7 7 7 6 
+        c c c 6 6 6 c 6 6 6 6 7 7 6 6 6 
+        . c c 7 6 6 6 6 6 7 7 7 7 c 6 . 
+        . c 7 7 6 6 7 6 6 7 7 6 7 7 c . 
+        . c c c c 7 7 6 f 7 7 c c c c . 
+        . . . . c 7 c f f c 7 c . . . . 
+        . . . . . 6 f e e e c . . . . . 
+        . . . . . e e e e e e . . . . . 
+        . . . . e e . e e . e e . . . . 
+        . . . . . . . e e . . . . . . . 
+        `, true)
+    scene.setTile(6, assets.image`player_1`, true)
 }
 let bob: Sprite = null
 scene.setBackgroundImage(assets.image`base_bg`)

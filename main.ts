@@ -37,7 +37,7 @@ function make_map () {
     scene.setTile(2, assets.tile`tile_0`, true)
     scene.setTile(5, assets.tile`tile_1`, false)
     scene.setTile(9, assets.tile`tile_2`, false)
-    scene.setTile(1, assets.tile`fire_hole`, true)
+    scene.setTile(1, assets.tile`fire_hole`, false)
 }
 let bob: Sprite = null
 scene.setBackgroundImage(assets.image`base_bg`)

@@ -164,6 +164,25 @@ namespace myImages {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
 `;
+            case "image3":
+            case "bomb":return img`
+. . . . . . . 4 2 5 . . . . . . 
+. . . . . . 4 2 4 . . . . . . . 
+. . . . . . 2 2 f f . . . . . . 
+. . . . f f 2 2 9 f f f . . . . 
+. . . c c c c 2 f f f f f . . . 
+. . f c c c c e e e 1 1 f f . . 
+. . c c c c c e e e 1 1 9 f . . 
+. f c c c c e e e e e 9 9 f f . 
+. f c c c e e e f f f f 9 f f . 
+. f f c c e e f f f f f f f f . 
+. f e c c e e f f f f f f f f . 
+. . f e c c e f f f f f e f . . 
+. . f e e c e e f f f e f f . . 
+. . . f e e e e e e e e f . . . 
+. . . . f f e e e e f f . . . . 
+. . . . . . f f f f . . . . . . 
+`;
             case "ur7kh$6NU:@:_":
             case "spook":return img`
 ........................
@@ -190,25 +209,6 @@ namespace myImages {
 ........................
 ........................
 ........................
-`;
-            case "image3":
-            case "bomb":return img`
-. . . . . . . 4 2 5 . . . . . . 
-. . . . . . 4 2 4 . . . . . . . 
-. . . . . . 2 2 f f . . . . . . 
-. . . . f f 2 2 9 f f f . . . . 
-. . . c c c c 2 f f f f f . . . 
-. . f c c c c e e e 1 1 f f . . 
-. . c c c c c e e e 1 1 9 f . . 
-. f c c c c e e e e e 9 9 f f . 
-. f c c c e e e f f f f 9 f f . 
-. f f c c e e f f f f f f f f . 
-. f e c c e e f f f f f f f f . 
-. . f e c c e f f f f f e f . . 
-. . f e e c e e f f f e f f . . 
-. . . f e e e e e e e e f . . . 
-. . . . f f e e e e f f . . . . 
-. . . . . . f f f f . . . . . . 
 `;
         }
         return null;

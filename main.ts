@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const bomb = SpriteKind.create()
+    export const ray = SpriteKind.create()
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -9,6 +10,39 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+sprites.onDestroyed(SpriteKind.bomb, function (sprite) {
+    explode_ray = sprites.create(assets.tile`tile_0_open`, SpriteKind.ray)
+    explode_ray.setPosition(big_bomb.x, big_bomb.y)
+    timer.after(500, function () {
+        explode_ray.destroy(effects.spray, 100)
+    })
+    active_bomb = false
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (!(active_bomb)) {
+        active_bomb = true
+        big_bomb = sprites.create(img`
+            . . . . . c c b b b . . . . . . 
+            . . . . c b d d d d b . . . . . 
+            . . . . c d d d d d d b b . . . 
+            . . . . c d d d d d d d d b . . 
+            . . . c b b d d d d d d d b . . 
+            . . . c b b d d d d d d d b . . 
+            . c c c c b b b b d d d b b b . 
+            . c d d b c b b b b b b b b d b 
+            c b b d d d b b b b b d d b d b 
+            c c b b d d d d d d d b b b d c 
+            c b c c c b b b b b b b d d c c 
+            c c b b c c c c b d d d b c c b 
+            . c c c c c c c c c c c b b b b 
+            . . c c c c c b b b b b b b c . 
+            . . . . . . c c b b b b c c . . 
+            . . . . . . . . c c c c . . . . 
+            `, SpriteKind.bomb)
+        big_bomb.setPosition(bob.x, bob.y)
+        info.startCountdown(2)
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     bob,
@@ -16,6 +50,10 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     200,
     true
     )
+})
+info.onCountdownEnd(function () {
+    big_bomb.destroy(effects.spray, 100)
+    scene.cameraShake(4, 200)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -32,6 +70,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     200,
     true
     )
+})
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.ray, function (sprite, otherSprite) {
+    sprite.destroy(effects.starField, 100)
 })
 function make_map () {
     scene.setTile(2, assets.tile`tile_0`, true)
@@ -57,8 +98,28 @@ function make_map () {
         . . . . . . . e e . . . . . . . 
         `, true)
     scene.setTile(6, assets.image`player_1`, true)
-    scene.setTile(3, assets.image`spook`, false)
+    scene.setTile(8, img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, false)
 }
+let active_bomb = false
+let big_bomb: Sprite = null
+let explode_ray: Sprite = null
 let bob: Sprite = null
 scene.setBackgroundImage(assets.image`base_bg`)
 bob = sprites.create(assets.image`player_1`, SpriteKind.Player)

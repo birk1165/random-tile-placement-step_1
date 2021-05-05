@@ -57,6 +57,7 @@ function make_map () {
         . . . . . . . e e . . . . . . . 
         `, true)
     scene.setTile(6, assets.image`player_1`, true)
+    scene.setTile(3, assets.image`spook`, false)
 }
 let bob: Sprite = null
 scene.setBackgroundImage(assets.image`base_bg`)

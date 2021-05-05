@@ -9,20 +9,20 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "bomb"
     },
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///7gRAAA/+/v7k9NAPD/Lv/k/v8A8O/yv9EuQv//4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "player_1"
+    },
     "ur7kh$6NU:@:_": {
         "data": "hwQYABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8PAAAAAAAAAAD/3d37/wAAAAAAAPAbEREdsQ8AAAAAAPAREdEd+/8AAAAAAB8REfEfwbEPAAAAAB8REb0cH/sPAAAAAB8REd0dH7H/AAAAAB8REd27H/v/AAAAAPAR0d27v///AAAAAPDb3d3L////AAAAAAD/3b38AAD/AAAAAAAA//8PAPAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "spook"
     },
     "image1": {
-        "data": "hwQQABAAAAAhIiIiIiIiEiIiIiIqIiIiIiIiIiIiIiJiIiIiIiImIiKiIiIiIiIiIiIiEiIiIiIiIiIiIioiIiIiYiIiIiIiIiIiIiIiIiIiJiIiIiIiIiIiEiIiIioiIiIiIiIiIiIiIiKiYiIiIiIiIiIiIiIiIiIiIiIiIiIhIiIiIiIiEg==",
+        "data": "hwQQABAAAAAxIiIiIiIiEjMiIiIqIiIiIiIiIiIiIiJiIiIiIiImIiKiIiIiIiIiIiIiEiIiIiIiIiIiIioiIiIiYiIiIiIiIiIiIiIiIiIiJiIiIiIiIiIiEiIiIioiIiIiIiIiIiIiIiKiYiIiIiIiIiIiIiIiMyIiIiIiIiIxIiIiIiIiEg==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "level_0"
-    },
-    "image2": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAPAAAAAPD///7gRAAA/+/v7k9NAPD/Lv/k/v8A8O/yv9EuQv//4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "player_1"
     },
     "anim1": {
         "namespace": "myAnimations",
